@@ -40,3 +40,13 @@ How to run
 Just start the Rails server with script/server -e production in either
 of the project folders, open the homepage and try out the 46k and 460k
 pages. 
+
+How to run the profiling test
+=============================
+
+Make sure you have the ruby-prof gem installed. Then run
+
+    RAILS_ENV=production ruby script/console
+    require 'test.rb'
+
+then you'll find a ruby-prof profile in tmp/profile-graph.html.
